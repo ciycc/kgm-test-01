@@ -17,6 +17,7 @@ module.exports = {
   },
   rules: {
     'vue/multi-word-component-names': 'off',
+    'linebreak-style': 0,
     'vue/html-button-has-type': ['error', {
       button: true,
       submit: true,
