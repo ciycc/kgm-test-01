@@ -1,5 +1,5 @@
 <script setup>
-import router from '@/router';
+  const router = useRouter();
 </script>
 <template>
   <span>HOME HOME </span>

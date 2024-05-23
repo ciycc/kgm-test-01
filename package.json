@@ -12,6 +12,7 @@
   "dependencies": {
     "@rushstack/eslint-patch": "^1.10.3",
     "@vue/eslint-config-airbnb": "^8.0.0",
+    "pinia": "^2.1.7",
     "vue": "^3.4.21",
     "vue-router": "^4.3.2"
   },
@@ -20,6 +21,7 @@
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
     "sass": "^1.77.2",
+    "unplugin-auto-import": "^0.17.6",
     "vite": "^5.2.11"
   }
 }
