@@ -6,6 +6,13 @@ import AutoImport from 'unplugin-auto-import/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
+      '&': resolve(__dirname, 'src/publishing'),
+      '~': resolve(__dirname, 'src/service'),
+    },
+  },
   plugins: [vue({
     include: [/\.vue$/, /\.md$/]
   }),
@@ -21,15 +28,15 @@ export default defineConfig({
   }),
   ],
 
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, './src'),
-      '&': resolve(__dirname, './src/publishing'),
-      '~': resolve(__dirname, './src/service'),
-    },
-  },
   css: {
     devSourcemap: process.env.NODE_ENV === 'development',
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use "./src/service/scss/variable";
+        @use "./src/service/scss/reset";
+        @use "./src/service/scss/util" as *;`,
+      }
+    },
     postcss: {
       plugins: [autoprefixer({})],
     },

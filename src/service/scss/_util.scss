@@ -1,0 +1,66 @@
+@use "sass:math";
+$base-rem-size: 10px;
+
+// 단위 제거 유틸리티 함수
+@function remove-unit($value) {
+  @return math.div($value, $value * 0 + 1);
+}
+
+// 단위가 없는 숫자 값 → px 값 반환 유틸리티 함수
+@function unitless-px($value) {
+  @return if(unitless($value), if($value !=0, $value * 1px, $value), $value);
+}
+
+// 소수점 제한 유틸리티 함수
+@function decimal-limit($value, $base: $base-decimal-size) {
+  @return math.div(math.floor($value * $base), $base);
+}
+
+// px 값 → rem 값 변경 유틸리티 함수
+@function rem($px, $base: $base-rem-size) {
+  @return (remove-unit(math.div($px, $base))) * 1rem;
+}
+
+
+// blind 믹스인
+@mixin blind {
+  clip: rect(0 0 0 0);
+  color: transparent;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  text-indent: -999.9rem;
+  width: 0;
+  z-index: -1;
+}
+
+// 텍스트 생략(Ellipsis) 믹스인
+@mixin eline-clamp($lines: 1) {
+  @if ($lines ==1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @else {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}
+
+
+
+
+.blind {
+  @include blind;
+}
+
+.hide {
+  display: none !important;
+}

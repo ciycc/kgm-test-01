@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-
+import { publishingGuide } from '&/router'
 const routes = [
   {
     path: '/',
@@ -11,6 +11,7 @@ const routes = [
     name: 'Home2',
     component: () => import('@/views/Home2.vue'),
   },
+  ...publishingGuide,
 ];
 const router = createRouter({
   history: createWebHistory(),
