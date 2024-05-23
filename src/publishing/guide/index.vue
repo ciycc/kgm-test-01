@@ -27,6 +27,7 @@
         <li><router-link to="/publishing/swiper">Swiper</router-link></li>
         <li><router-link to="/publishing/lazy">Lazy</router-link></li>
         <li><router-link to="/publishing/chart">Chart</router-link></li>
+        <li><router-link to="/">HOME</router-link></li>
       </ul>
       <button class="btn-toggle" type="button" @click="toggleStatus=!toggleStatus"><span class="blind">열고/닫기</span></button>
     </div>
@@ -36,9 +37,7 @@
   </div>
 </template>
 
-<style lang="scss">
-@use "&/guide/scss/publishing-guide.scss";
-
-// @include menu-list;
-
+<style lang="scss" scoped>
+@import "&/guide/scss/publishing-guide.scss";
+@include menu-list;
 </style>
