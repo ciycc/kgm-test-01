@@ -24,4 +24,5 @@ module.exports = {
       reset: true,
     }],
   },
+  'eol-last': 0,
 };
