@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Accordion 가이드</h2>
+    <h1 class="container-title">Accordion Guide</h1>
   </div>
 </template>
 
@@ -8,6 +8,4 @@
 
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

@@ -1,7 +1,7 @@
 const publishingPath = '/publishing';
 const publishingGuide = [
   {
-    path: publishingPath,
+    path: `${publishingPath}`,
     name: 'PublishingGuide',
     component: () => import('&/guide/index.vue'),
 
@@ -15,6 +15,7 @@ const publishingGuide = [
         path: 'fonts',
         name: 'PublishingFonts',
         component: () => import('&/guide/components/fonts.vue'),
+        props: true,
       },
       {
         path: 'layout',
@@ -95,13 +96,72 @@ const publishingGuide = [
         path: 'publist',
         name: 'PublishingPublist',
         component: () => import('&/guide/components/publishing-list.vue'),
+        children: [
+          {
+            path: 'total',
+            name: 'PublishingPublistTotal',
+            component: () => import('&/guide/components/publist/total.vue'),
+          },
+          {
+            path: 'cat1',
+            name: 'PublishingPublistCat1',
+            component: () => import('&/guide/components/publist/cat1.vue'),
+          },
+          {
+            path: 'cat2',
+            name: 'PublishingPublistCat2',
+            component: () => import('&/guide/components/publist/cat2.vue'),
+          },
+          {
+            path: 'cat3',
+            name: 'PublishingPublistCat3',
+            component: () => import('&/guide/components/publist/cat3.vue'),
+          },
+          {
+            path: 'cat4',
+            name: 'PublishingPublistCat4',
+            component: () => import('&/guide/components/publist/cat4.vue'),
+          },
+          {
+            path: 'cat5',
+            name: 'PublishingPublistCat5',
+            component: () => import('&/guide/components/publist/cat5.vue'),
+          },
+        ],
       },
       {
         path: 'convention',
         name: 'PublishingConvention',
         component: () => import('&/guide/components/publishing-convention.vue'),
+        children: [
+          {
+            path: 'rule1',
+            name: 'PublishingPublistRule1',
+            component: () => import('&/guide/components/convention/rule1.vue'),
+          },
+          {
+            path: 'rule2',
+            name: 'PublishingPublistRule2',
+            component: () => import('&/guide/components/convention/rule2.vue'),
+          },
+          {
+            path: 'rule3',
+            name: 'PublishingPublistRule3',
+            component: () => import('&/guide/components/convention/rule3.vue'),
+          },
+          {
+            path: 'rule4',
+            name: 'PublishingPublistRule4',
+            component: () => import('&/guide/components/convention/rule4.vue'),
+          },
+          {
+            path: 'rule5',
+            name: 'PublishingPublistRule5',
+            component: () => import('&/guide/components/convention/rule5.vue'),
+          },
+        ],
       },
-    ]
+    ],
   },
-]
-export default publishingGuide
+];
+export default publishingGuide;

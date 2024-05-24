@@ -1,4 +1,3 @@
-import publishingGuide from '&/router/publishing-guide.js'
-export {
-  publishingGuide
-}
+import publishingGuide from '&/router/publishing-guide';
+
+export default publishingGuide;

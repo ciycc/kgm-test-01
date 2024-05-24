@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Swiper 가이드</h2>
+    <h1 class="container-title">Swiper Guide</h1>
   </div>
 </template>
 

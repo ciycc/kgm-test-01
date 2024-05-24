@@ -9,7 +9,6 @@ module.exports = {
     'plugin:vue/vue3-essential',
     '@vue/eslint-config-airbnb',
   ],
-
   settings: {
     ...createAliasSetting({
       '@': `${path.resolve(__dirname, 'src')}`,
@@ -20,11 +19,15 @@ module.exports = {
   rules: {
     'vue/multi-word-component-names': 'off',
     'linebreak-style': 0,
+    'eol-last': 0,
+    'vue/comment-directive': 0,
+    'no-undef': 0,
+    'import/no-unresolved': 'off',
     'vue/html-button-has-type': ['error', {
       button: true,
       submit: true,
       reset: true,
-    }],
+    },
+    ],
   },
-  'eol-last': 0,
 };

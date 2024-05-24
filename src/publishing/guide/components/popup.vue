@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Popup 가이드</h2>
+    <h1 class="container-title">Popup Guide</h1>
   </div>
 </template>
 

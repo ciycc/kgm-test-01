@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Form 가이드</h2>
+    <h1 class="container-title">Form Guide</h1>
   </div>
 </template>
 

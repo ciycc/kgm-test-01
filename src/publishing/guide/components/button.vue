@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>버튼 가이드</h2>
+    <h1 class="container-title">Button  Guide</h1>
   </div>
 </template>
 

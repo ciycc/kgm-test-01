@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>컬러가이드</h2>
+    <h1 class="container-title">Color Guide</h1>
   </div>
 </template>
 

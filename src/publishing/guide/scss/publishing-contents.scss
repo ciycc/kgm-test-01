@@ -1,0 +1,41 @@
+@use "~/scss/util.scss" as *;
+
+@mixin publist-convention {
+
+  .publishing-list,
+  .publishing-convention {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    .menu-list,
+    .menu-convention {
+      margin-bottom: rem(10);
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        li {
+          flex: 1;
+
+          a {
+            display: inline-block;
+            width: 100%;
+            border: 2px solid #ccc;
+            line-height: 1;
+            padding: rem(8) rem(20);
+            text-align: center;
+            border-radius: rem(4);
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+
+    .contents-wrap {
+      flex: 1;
+    }
+  }
+}

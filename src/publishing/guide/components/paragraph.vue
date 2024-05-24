@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Paragraph 가이드</h2>
+    <h1 class="container-title">Paragraph Guide</h1>
   </div>
 </template>
 

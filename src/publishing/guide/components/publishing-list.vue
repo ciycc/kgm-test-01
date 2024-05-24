@@ -1,24 +1,38 @@
+<script setup>
+</script>
+
 <template>
   <div class="publishing-list">
-    <h1>퍼블리싱 리스트</h1>
+    <h1 class="container-title">Publishing List</h1>
+    <div class="menu-list">
+      <ul>
+        <li>
+          <router-link to="/publishing/publist/total">전체</router-link>
+        </li>
+        <li>
+          <router-link to="/publishing/publist/cat1">CAT1</router-link>
+        </li>
+        <li>
+          <router-link to="/publishing/publist/cat2">CAT2</router-link>
+        </li>
+        <li>
+          <router-link to="/publishing/publist/cat3">CAT3</router-link>
+        </li>
+        <li>
+          <router-link to="/publishing/publist/cat4">CAT4</router-link>
+        </li>
+        <li>
+          <router-link to="/publishing/publist/cat5">CAT5</router-link>
+        </li>
+      </ul>
+    </div>
     <div class="contents-wrap">
       <router-view />
     </div>
   </div>
 </template>
 
-<script setup>
-
-</script>
-
 <style lang="scss" scoped>
-.publishing-list {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  .contents-wrap {
-    flex: 1;
-    border: 1px solid #000;
-  }
-}
+@use "&/guide/scss/publishing-contents.scss" as *;
+@include publist-convention;
 </style>

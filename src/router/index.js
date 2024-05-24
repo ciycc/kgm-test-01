@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import { publishingGuide } from '&/router'
+import publishingGuide from '&/router';
+
 const routes = [
   {
     path: '/',

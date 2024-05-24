@@ -1,5 +1,5 @@
 <script setup>
-  const router = useRouter();
+const router = useRouter();
 </script>
 <template>
   <span>HOME HOME </span>

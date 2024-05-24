@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Tooltip 가이드</h2>
+    <h1 class="container-title">Tooltip Guide</h1>
   </div>
 </template>
 

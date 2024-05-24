@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Card 가이드</h2>
+    <h1 class="container-title">Card Guide</h1>
   </div>
 </template>
 
