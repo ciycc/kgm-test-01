@@ -91,6 +91,16 @@ const publishingGuide = [
         name: 'PublishingChart',
         component: () => import('&/guide/components/chart.vue'),
       },
+      {
+        path: 'publist',
+        name: 'PublishingPublist',
+        component: () => import('&/guide/components/publishing-list.vue'),
+      },
+      {
+        path: 'convention',
+        name: 'PublishingConvention',
+        component: () => import('&/guide/components/publishing-convention.vue'),
+      },
     ]
   },
 ]

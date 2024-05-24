@@ -10,3 +10,8 @@ html {
 body {
   font-size: rem(16);
 }
+
+.custom-scroll-wrap {
+  height: 100%;
+  overflow-y: auto;
+}

@@ -30,13 +30,6 @@ export default defineConfig({
 
   css: {
     devSourcemap: process.env.NODE_ENV === 'development',
-    // preprocessorOptions: {
-    //   scss: {
-    //     additionalData: `@use "./src/service/scss/variable";
-    //     @use "./src/service/scss/reset";
-    //     @use "./src/service/scss/util" as *;`,
-    //   }
-    // },
     postcss: {
       plugins: [autoprefixer({})],
     },

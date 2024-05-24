@@ -1,12 +1,11 @@
 <template>
   <div>
-    <h2>FONTS 가이드</h2>
+    <h1>퍼블리싱 컨벤션</h1>
   </div>
 </template>
 
 <script setup>
-  const route = useRoute();
-  console.log(route.params)
+
 </script>
 
 <style lang="scss" scoped>
