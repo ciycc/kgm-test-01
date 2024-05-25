@@ -3,6 +3,9 @@ const publishingGuide = [
   {
     path: `${publishingPath}`,
     name: 'PublishingGuide',
+    meta: {
+      title: 'KG 모빌리티 퍼블리싱 GUIDE',
+    },
     component: () => import('&/guide/index.vue'),
 
     children: [

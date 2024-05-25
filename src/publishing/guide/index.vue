@@ -1,12 +1,22 @@
 <script setup>
 const router = useRouter();
 const route = useRoute();
+const toggleStatus = ref(false);
+const beforeTitle = document.title;
 
 if (route.path === '/publishing') {
   router.push({ name: 'PublishingColor' });
 }
 
-const toggleStatus = ref(false);
+watchEffect(() => {
+  if (route.meta.title) {
+    document.title = route.meta.title;
+  }
+});
+
+onUnmounted(() => {
+  document.title = beforeTitle;
+});
 </script>
 
 <template>

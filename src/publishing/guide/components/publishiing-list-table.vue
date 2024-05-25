@@ -97,21 +97,25 @@ watchEffect(() => {
 
 <style lang="scss" scoped>
   .publishing-list-table {
-    th, td {
-      text-align: center;
-      padding: rem(10) rem(8);
-    }
-    th {
-      font-weight: 500;
-      white-space: nowrap;
-      color: #eee;
-      background: #421d6a;
-      border-bottom: 1px solid #efefef;
-    }
-    td {
-      font-weight: 400;
-      border-bottom: 1px solid #eee;
-      font-size: rem(13);
+    table {
+      min-width: rem(800);
+      th, td {
+        text-align: center;
+        padding: rem(10) rem(8);
+      }
+      th {
+        font-weight: 500;
+        white-space: nowrap;
+        color: #eee;
+        background: #421d6a;
+        border-bottom: 1px solid #efefef;
+      }
+      td {
+        font-weight: 400;
+        border-bottom: 1px solid #eee;
+        font-size: rem(13);
+        vertical-align: middle;
+      }
     }
   }
 </style>
