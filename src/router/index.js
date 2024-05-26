@@ -15,7 +15,7 @@ const routes = [
   ...publishingGuide,
 ];
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/kgm-test-01/'),
   routes,
   scrollBehavior() {
     // always scroll to top
