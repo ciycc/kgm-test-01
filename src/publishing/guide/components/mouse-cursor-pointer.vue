@@ -1,12 +1,16 @@
+<script setup>
+const props = defineProps({
+  mouseShape: {
+    type: String,
+    default: '',
+  },
+});
+</script>
 <template>
-  <div class="mouse-cursor-pointer">
+  <div class="mouse-cursor-pointer" :class="[props.mouseShape]">
     <div class="ball" />
   </div>
 </template>
-
-<script setup>
-
-</script>
 
 <style lang="scss" scoped>
 .mouse-cursor-pointer {
@@ -17,10 +21,18 @@
   mix-blend-mode: difference;
 
   .ball {
-    width: rem(15);
-    height: rem(15);
-    background: #ff0;
+    width: rem(10);
+    height: rem(10);
+    background: #e40077;
     border-radius: 50%;
+    transition: all .1s linear;
+  }
+
+  &.zoom {
+    .ball {
+      width: rem(30);
+      height: rem(30);
+    }
   }
 }
 </style>
