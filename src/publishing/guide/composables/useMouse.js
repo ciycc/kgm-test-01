@@ -3,26 +3,54 @@ import { mouseStore } from '&/guide/store/mouseStore';
 const msStore = mouseStore();
 const { setGxy } = msStore;
 
-export default function useMouse() {
-  // const x = ref(0);
-  // const y = ref(0);
-
-  // a composable can update its managed state over time.
-  // function update(event) {
-  //   x.value = event.pageX;
-  //   y.value = event.pageY;
-  // }
-
-  // a composable can also hook into its owner component's
-  // lifecycle to setup and teardown side effects.
-  // onMounted(() => window.addEventListener('mousemove', update));
-  // onUnmounted(() => window.removeEventListener('mousemove', update));
-
-  // expose managed state as return value
+export function useMouse() {
   const changeNum = (num1, num2) => {
     setGxy(num1, num2);
   };
 
-  // return { x, y, changeNum };
   return { changeNum };
+}
+
+export function useSetMouseShape() {
+  // const
+  const bodyEl = document.body;
+  const mouseStatus = ref(false);
+
+  bodyEl.classList.add('custom-mouse');
+  const mouseMoveHandler = (e) => {
+    const pointerEl = document.querySelector('.mouse-cursor-pointer');
+    if (!pointerEl) return;
+
+    const x = e.clientX;
+    const y = e.clientY;
+
+    pointerEl.style.cssText = `
+      top: ${y}px;
+      left: ${x}px;
+    `;
+  };
+  const mouseEnterHandler = () => {
+    mouseStatus.value = true;
+  };
+  const mouseLeaveHandler = () => {
+    mouseStatus.value = false;
+  };
+  onMounted(() => {
+    document.addEventListener('mouseenter', mouseEnterHandler);
+    document.addEventListener('mouseleave', mouseLeaveHandler);
+    document.addEventListener('mousemove', mouseMoveHandler);
+    document.addEventListener('mousemove', mouseEnterHandler, { once: true });
+  });
+
+  onUnmounted(() => {
+    document.removeEventListener('mousemove', mouseMoveHandler);
+    document.removeEventListener('mouseleave', mouseLeaveHandler);
+    document.removeEventListener('mousemove', mouseMoveHandler);
+    bodyEl.classList.remove('custom-mouse');
+  });
+  // document.addEventListener('mouseover', )
+
+  return {
+    mouseStatus,
+  };
 }

@@ -1,5 +1,5 @@
 <script setup>
-import useMouse from '&/guide/composables/useMouse';
+import { useMouse } from '&/guide/composables/useMouse';
 import { mouseStore } from '&/guide/store/mouseStore';
 
 // [store 01] global (상태)변수를 사용하기 위해 store를 사용했습니다.
@@ -20,6 +20,4 @@ const { changeNum } = useMouse();
   </div>
 </template>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

@@ -13,3 +13,7 @@ body {
   height: 100%;
   overflow-y: auto;
 }
+
+.custom-mouse * {
+  cursor: none;
+}
