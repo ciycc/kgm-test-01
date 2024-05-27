@@ -7,22 +7,22 @@
     <div class="menu-list">
       <ul>
         <li>
-          <router-link to="/publishing/publist/total">전체</router-link>
+          <router-link class="cursor-zoom" to="/publishing/publist/total">전체</router-link>
         </li>
         <li>
-          <router-link to="/publishing/publist/cat1">CAT1</router-link>
+          <router-link class="cursor-zoom" to="/publishing/publist/cat1">CAT1</router-link>
         </li>
         <li>
-          <router-link to="/publishing/publist/cat2">CAT2</router-link>
+          <router-link class="cursor-zoom" to="/publishing/publist/cat2">CAT2</router-link>
         </li>
         <li>
-          <router-link to="/publishing/publist/cat3">CAT3</router-link>
+          <router-link class="cursor-zoom" to="/publishing/publist/cat3">CAT3</router-link>
         </li>
         <li>
-          <router-link to="/publishing/publist/cat4">CAT4</router-link>
+          <router-link class="cursor-zoom" to="/publishing/publist/cat4">CAT4</router-link>
         </li>
         <li>
-          <router-link to="/publishing/publist/cat5">CAT5</router-link>
+          <router-link class="cursor-zoom" to="/publishing/publist/cat5">CAT5</router-link>
         </li>
       </ul>
     </div>

@@ -1,6 +1,12 @@
 @use "~/scss/util.scss" as *;
 
 @mixin publist-convention {
+  a {
+    &.router-link-active {
+      color: #e40077;
+      font-weight: 600;
+    }
+  }
 
   .publishing-list,
   .publishing-convention {

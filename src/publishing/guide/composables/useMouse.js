@@ -40,8 +40,8 @@ export function useSetMouseShape() {
     const self = e.target;
     const tgName = self.tagName.toLowerCase();
     if (tgName !== 'a' && tgName !== 'button') return;
-    if (self.classList.contains('zoom')) {
-      mouseShape.value = 'zoom';
+    if (self.classList.contains('cursor-zoom')) {
+      mouseShape.value = 'cursor-zoom';
     }
   };
   const mouseLinkLeaveHandler = (e) => {

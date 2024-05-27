@@ -28,7 +28,7 @@ const props = defineProps({
     transition: all .1s linear;
   }
 
-  &.zoom {
+  &.cursor-zoom {
     .ball {
       width: rem(30);
       height: rem(30);

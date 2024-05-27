@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="container-title">Button  Guide</h1>
+    <h1 class="container-title">Button Guide</h1>
   </div>
 </template>
 
