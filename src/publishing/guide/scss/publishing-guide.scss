@@ -149,11 +149,127 @@
 
   .publishing-container {
     &:deep() {
+      .prose {
+        ol {
+          counter-reset: counter-list;
+
+          li {
+            padding: rem(8) rem(16) rem(0);
+            position: relative;
+
+            &::before {
+              counter-increment: counter-list;
+              content: counter(counter-list)". ";
+              position: absolute;
+              top: rem(8);
+              left: 0;
+            }
+          }
+        }
+
+        ul {
+          ul {
+            padding: 0 rem(2);
+          }
+
+          li {
+            padding: rem(8) rem(16) rem(0);
+            position: relative;
+
+            &::before {
+              content: '\2713';
+              position: absolute;
+              left: 0;
+              top: rem(9);
+            }
+          }
+        }
+
+        table {
+          width: auto;
+        }
+
+        table,
+        td,
+        th {
+          border: 1px solid #d0d7de;
+          padding: rem(6) rem(13);
+        }
+
+        th {
+          background-color: #421d6a;
+          color: #fff;
+          font-weight: 500;
+        }
+
+        td {
+          background: #fff;
+        }
+
+        *+ {
+
+          table,
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+
+            margin-top: rem(24);
+          }
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          +* {
+            margin-top: rem(10);
+          }
+        }
+
+        h1 {
+          font-size: rem(20);
+          font-weight: 700;
+          color: #421d6a;
+
+          +* {
+            margin-top: 30px;
+          }
+        }
+
+        h2 {
+          font-size: rem(18);
+          font-weight: 700;
+          color: #421d6a;
+        }
+
+        h3,
+        h4,
+        h5 {
+          font-size: rem(16);
+          font-weight: 700;
+        }
+
+        .shiki {
+          padding: 15px 10px;
+          border-radius: 8px;
+          max-height: 200px;
+          overflow-y: auto;
+          // margin: rem(10) 0 rem(20);
+
+          code {
+            mix-blend-mode: plus-lighter;
+          }
+        }
+      }
+
       h1 {
         &.container-title {
-          // background: #eee;
           text-align: center;
-          // border-radius: 0 0 rem(8) rem(10);
           padding: rem(10) 0 rem(10);
           font-size: rem(16);
           font-weight: 700;

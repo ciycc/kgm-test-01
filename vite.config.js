@@ -3,6 +3,8 @@ import { resolve } from 'node:path';
 import vue from '@vitejs/plugin-vue';
 import autoprefixer from 'autoprefixer';
 import AutoImport from 'unplugin-auto-import/vite';
+import Markdown from 'vite-plugin-vue-markdown'
+import Shiki from 'markdown-it-shiki';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -14,19 +16,28 @@ export default defineConfig({
       '~': resolve(__dirname, 'src/service'),
     },
   },
-  plugins: [vue({
-    include: [/\.vue$/, /\.md$/],
-  }),
-  AutoImport({
-    imports: ['vue', 'vue-router', 'pinia'],
-    // eslint 예외 처리
-    eslintrc: {
-      enabled: true,
-      filepath: './src/system/auto-config/.eslintrc-auto-import.json',
-      globalsPropValue: true,
-    },
-    exclude: ['**/dist/**'],
-  }),
+  plugins: [
+    vue({
+      include: [/\.vue$/, /\.md$/],
+    }),
+    Markdown({
+      // 기본 지정 클래스
+      wrapperClasses: 'prose prose-sm text-left',
+      markdownItSetup(md) {
+        // Shiki 스킨 설정(code style)
+        md.use(Shiki, {});
+      },
+    }),
+    AutoImport({
+      imports: ['vue', 'vue-router', 'pinia'],
+      // eslint 예외 처리
+      eslintrc: {
+        enabled: true,
+        filepath: './src/system/auto-config/.eslintrc-auto-import.json',
+        globalsPropValue: true,
+      },
+      exclude: ['**/dist/**'],
+    }),
   ],
 
   css: {
