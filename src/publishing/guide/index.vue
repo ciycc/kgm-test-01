@@ -21,6 +21,21 @@ watchEffect(() => {
 onUnmounted(() => {
   document.title = beforeTitle;
 });
+
+const checkOs = function () {
+  const os = 'desktop';
+  document.body.id = os;
+  try {
+    document.createEvent('TouchEvent')
+    document.body.id = 'mobile';
+    return true
+  } catch (e) {
+    document.body.id = 'desktop';
+  }
+}
+onMounted(() => {
+  checkOs();
+})
 </script>
 
 <template>
