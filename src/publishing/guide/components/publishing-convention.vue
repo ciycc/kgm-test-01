@@ -4,19 +4,19 @@
     <div class="menu-convention">
       <ul>
         <li>
-          <router-link class="cursor-zoom" to="/publishing/convention/rule1">RULE1</router-link>
+          <router-link class="cursor-zoom" to="/publishing/convention/rule1">Basic</router-link>
         </li>
         <li>
-          <router-link class="cursor-zoom" to="/publishing/convention/rule2">RULE2</router-link>
+          <router-link class="cursor-zoom" to="/publishing/convention/rule2">Markup</router-link>
         </li>
         <li>
-          <router-link class="cursor-zoom" to="/publishing/convention/rule3">RULE3</router-link>
+          <router-link class="cursor-zoom" to="/publishing/convention/rule3">Style</router-link>
         </li>
         <li>
-          <router-link class="cursor-zoom" to="/publishing/convention/rule4">RULE4</router-link>
+          <router-link class="cursor-zoom" to="/publishing/convention/rule4">Vue</router-link>
         </li>
         <li>
-          <router-link class="cursor-zoom" to="/publishing/convention/rule5">RULE5</router-link>
+          <router-link class="cursor-zoom" to="/publishing/convention/rule5">Etc</router-link>
         </li>
 
       </ul>

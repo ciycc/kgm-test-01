@@ -1,13 +1,11 @@
+<script setup>
+import Description1 from '&/guide/doc/convention/md1.md';
+</script>
 <template>
   <div>
-    <h1>퍼블리싱 컨벤션</h1>
-    <h2>RULE-1</h2>
+    <Description1 />
   </div>
 </template>
-
-<script setup>
-
-</script>
 
 <style lang="scss" scoped>
 

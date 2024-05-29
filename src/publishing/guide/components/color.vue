@@ -1,6 +1,6 @@
 <script setup>
 // import { } from '&/components/';
-import Description from '&/guide/components/markdown/index.md';
+import Description from '&/guide/doc/sample1.md';
 </script>
 <template>
   <div>

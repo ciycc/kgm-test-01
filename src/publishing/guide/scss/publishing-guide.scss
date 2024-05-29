@@ -150,6 +150,18 @@
   .publishing-container {
     &:deep() {
       .prose {
+        strong {
+          display: inline-block;
+          padding: 0 rem(3);
+          background-color: rgb(229, 255, 0);
+          color: #421d6a;
+        }
+
+        em {
+          font-weight: 600;
+          color: #421d6a;
+        }
+
         ol {
           counter-reset: counter-list;
 
@@ -187,6 +199,7 @@
 
         table {
           width: auto;
+          // min-width: rem(500);
         }
 
         table,
@@ -196,14 +209,23 @@
           padding: rem(6) rem(13);
         }
 
+        thead {
+          th {
+            text-align: center !important;
+          }
+        }
+
         th {
-          background-color: #421d6a;
-          color: #fff;
+          background-color: #f2ebfa;
+          color: #333;
           font-weight: 500;
         }
 
         td {
           background: #fff;
+          min-width: rem(100);
+          font-weight: 400;
+          font-size: rem(14);
         }
 
         *+ {
@@ -226,14 +248,17 @@
         h4,
         h5,
         h6 {
-          +* {
+
+          +div,
+          +p,
+          +table {
             margin-top: rem(10);
           }
         }
 
         h1 {
           font-size: rem(20);
-          font-weight: 700;
+          font-weight: 600;
           color: #421d6a;
 
           +* {
@@ -243,23 +268,24 @@
 
         h2 {
           font-size: rem(18);
-          font-weight: 700;
-          color: #421d6a;
+          font-weight: 600;
         }
 
         h3,
         h4,
         h5 {
-          font-size: rem(16);
-          font-weight: 700;
+          font-size: rem(15);
+          font-weight: 600;
+          color: #333;
         }
 
         .shiki {
-          padding: 15px 10px;
-          border-radius: 8px;
-          max-height: 200px;
+          padding: rem(15) rem(10);
+          border-radius: rem(8);
+          max-height: rem(350);
           overflow-y: auto;
           // margin: rem(10) 0 rem(20);
+          @include custom-scroll(rgba(255, 255, 255, .8));
 
           code {
             mix-blend-mode: plus-lighter;
