@@ -24,7 +24,7 @@
 |*Table*| **(MO, PC) 미정** |
 |*Mobile*| **(IOS, AOS 최소 버전)미정**<br><br>**(디바이스 지원) 미정** |
 |*Editor*|vscode|
-|*해상도*|- PC: ~1600(**Default 확인 필요**)<br> -MO: 360px<br><small>&nbsp;(최소 320px 까지 대응)</small> |
+|*해상도*|- PC: ~1600(**Default 확인 필요**)<br> - MO: 360px<br><small>&nbsp;(가능한 최소 320px 까지 대응)</small> |
 
 ### Publishing Node Package
 |구분|패키지명|내용|

@@ -37,15 +37,26 @@
 <br>
 
 ## z-index
-1. 본문: 1 ~ 9
-2. sticky: 10 ~ 19
-3. 툴팁: 20 ~ 29
-4. Sticky: 30 ~ 39
-5. Layer Popup: 40 ~ 49
-6. Bottom Sheet: 50 ~ 59
-7. 전체메뉴: 60 ~ 69
-8. Modal: 70 ~ 79
-9. Alert: 80 ~ 89
-10. ETC: 90 ~ 99
-11. Loading: 100 ~
+1. 본문: 1 ~ 10
+2. sticky: 11 ~ 20
+3. 툴팁: 21 ~ 30
+4. Sticky: 31 ~ 40
+5. Layer Popup: 41 ~ 50
+6. Bottom Sheet: 51 ~ 60
+7. 전체메뉴: 61 ~ 70
+8. Modal: 71 ~ 80
+9. Alert: 81 ~ 90
+10. ETC: 91 ~ 100
+11. Loading: 101 ~
+<br>
+<br>
+
+## style 작성 순서
+1. *노출 속성* (display, overflow)
+2. *위치 속성* (position)
+3. *BOX 속성* 크기 간격 / 여백 (width, height, padding, margin)
+4. *디자인 속성* 테두리 / 배경 / 글꼴 (border, background, font)
+5. *애니메이션 속성*
+6. *기타 속성*
+<br>
 <br>
