@@ -22,20 +22,19 @@ onUnmounted(() => {
   document.title = beforeTitle;
 });
 
-const checkOs = function () {
+const checkTouchDevice = () => {
   const os = 'desktop';
   document.body.id = os;
   try {
-    document.createEvent('TouchEvent')
+    document.createEvent('TouchEvent');
     document.body.id = 'mobile';
-    return true
   } catch (e) {
     document.body.id = 'desktop';
   }
-}
+};
 onMounted(() => {
-  checkOs();
-})
+  checkTouchDevice();
+});
 </script>
 
 <template>
@@ -66,7 +65,7 @@ onMounted(() => {
         </ul>
       </div>
       <button class="btn-toggle cursor-zoom" type="button" @click="toggleStatus = !toggleStatus"><span
-          class="blind">열고/닫기</span></button>
+        class="blind">열고/닫기</span></button>
       <p class="link-publist">
         <router-link to="/publishing/publist/total" class="cursor-zoom">PUBLISHING LIST</router-link>
       </p>

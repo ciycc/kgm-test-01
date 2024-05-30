@@ -1,7 +1,9 @@
-### 수정 이력
+### ====== 수정 이력 =======
 |수정 날짜|내용|
 |-:|:-:|
 |2024-05-29|최초작성|
+
+---
 
 # Publishing Basic Environment
 
@@ -10,17 +12,34 @@
 <br>
 
 ## 퍼블리싱 개발 환경
+### Publishing Basic Environment
 |구분|내용|
 |-:|:-|
-|*Language*|vue3 / vite (**별도 협의 필요**)|
-|*Node Version*|v20.13.1 (**별도 협의 필요**)|
+|*Language*|vue3 / vite (**별도 개발 협의 필요**)|
+|*Node Version*|v20.13.1 (**별도 개발 협의 필요**)|
 |*Style*|scss|
 |*Script*|- ES6<br> - ESLint Airbnb|
 |*Font*|**미정**|
-|*Descktop*| **IE 지원 미정** |
-|*Mobile*| **미정** |
+|*Descktop*| **(IE 지원) 미정** |
+|*Table*| **(MO, PC) 미정** |
+|*Mobile*| **(IOS, AOS 최소 버전)미정**<br><br>**(디바이스 지원) 미정** |
 |*Editor*|vscode|
 |*해상도*|- PC: ~1600(**Default 확인 필요**)<br> -MO: 360px<br><small>&nbsp;(최소 320px 까지 대응)</small> |
+
+### Publishing Node Package
+|구분|패키지명|내용|
+|:-|:-|:-|
+|*global*|pnmp|package 관리|
+|*dependencies*|pinia|전역 상태 변경|
+|*devDependencies*|postcss|css전처리기|
+||autoprefixer|css접두사|
+||sass|sass컴파일|
+||unplugin-auto-import|sass컴파일|
+||vite-plugin-vue-markdown|md변환|
+||markdown-it-shiki|md변환|
+||@vue/eslint-config-airbnb|airbnb eslint|
+||@rushstack/eslint-patch|airbnb eslint 최신화|
+||gsap|Motion Manage|
 
 <br>
 
@@ -60,6 +79,9 @@
     ├─system
 ```
 <br>
+
+## Vue File Path
+- 제공되는 router 경로 기준으로 작성합니다. (**개발 협의 필요**)
 
 ## 파일명 규칙
 ### 표기법 종류

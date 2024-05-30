@@ -4,26 +4,26 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@rushstack/eslint-patch": "^1.10.3",
-    "@vue/eslint-config-airbnb": "^8.0.0",
+    "gsap": "^3.12.5",
     "pinia": "^2.1.7",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2"
   },
   "devDependencies": {
+    "@rushstack/eslint-patch": "^1.10.3",
     "@vitejs/plugin-vue": "^5.0.4",
+    "@vue/eslint-config-airbnb": "^8.0.0",
     "autoprefixer": "^10.4.19",
     "markdown-it-shiki": "^0.9.0",
     "postcss": "^8.4.38",
     "sass": "^1.77.2",
     "unplugin-auto-import": "^0.17.6",
-    "unplugin-vue-markdown": "^0.26.2",
     "vite": "^5.2.11",
     "vite-plugin-vue-markdown": "^0.23.8"
   }
