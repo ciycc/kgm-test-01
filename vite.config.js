@@ -3,7 +3,7 @@ import { resolve } from 'node:path';
 import vue from '@vitejs/plugin-vue';
 import autoprefixer from 'autoprefixer';
 import AutoImport from 'unplugin-auto-import/vite';
-import Markdown from 'vite-plugin-vue-markdown'
+import Markdown from 'vite-plugin-vue-markdown';
 import Shiki from 'markdown-it-shiki';
 
 // https://vitejs.dev/config/
@@ -44,9 +44,12 @@ export default defineConfig({
     devSourcemap: process.env.NODE_ENV === 'development',
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "./src/service/scss/variable";
-        @use "./src/service/scss/reset";
-        @use "./src/service/scss/util" as *;`,
+        additionalData: `@import "./src/service/scss/variable";
+        @import "./src/service/scss/reset";
+        @import "./src/service/scss/util";
+        @import "./src/service/scss/mixin";
+        @import "./src/service/scss/common";
+        `,
       },
     },
     postcss: {
