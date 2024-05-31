@@ -1,5 +1,3 @@
-@use "~/scss/util.scss" as *;
-
 @mixin publist-convention {
   a {
     &.router-link-active {

@@ -1,3 +1,3 @@
-import publishingGuide from '&/router/publishing-guide';
+import publishingGuide from '&/router/router-publishing-guide';
 
 export default publishingGuide;

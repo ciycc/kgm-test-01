@@ -1,7 +1,6 @@
 <script setup>
 import DefaultLayout from '~/layouts/DefaultLayout.vue';
 import BlankLayout from '~/layouts/BlankLayout.vue';
-import { onMounted } from 'vue';
 
 const detectMobile = () => {
   const toMatchMobile = [
@@ -36,16 +35,11 @@ const getLayout = () => {
 };
 
 const layout = computed(() => getLayout());
-
-onMounted(() => {
-  console.log(document.querySelectorAll('div'));
-});
-
 </script>
 <template>
   <router-view v-slot="{ Component, route }">
     <component :is="layout" :class="[route.meta.wrapClass, route.name, checkDevice]">
-      <component :is="Component" :class="[route.meta.containerClass]" />
+      <component :is="Component" class="container" :class="[route.meta.containerClass]" />
     </component>
   </router-view>
 </template>

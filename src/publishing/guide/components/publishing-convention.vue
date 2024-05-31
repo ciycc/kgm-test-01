@@ -1,3 +1,7 @@
+<script setup>
+
+</script>
+
 <template>
   <div class="publishing-convention">
     <h1 class="container-title">Publishing Convention</h1>
@@ -27,11 +31,7 @@
   </div>
 </template>
 
-<script setup>
-
-</script>
-
 <style lang="scss" scoped>
-@use "&/guide/scss/publishing-contents.scss" as *;
+@import "&/guide/scss/publishing-contents.scss";
 @include publist-convention;
 </style>

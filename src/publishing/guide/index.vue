@@ -22,23 +22,6 @@ onUnmounted(() => {
   document.title = beforeTitle;
 });
 
-// const checkTouchDevice = () => {
-//   const os = 'desktop';
-//   document.body.id = os;
-//   try {
-//     document.createEvent('TouchEvent');
-//     document.body.id = 'mobile';
-//   } catch (e) {
-//     document.body.id = 'desktop';
-//   }
-// };
-// onMounted(() => {
-//   checkTouchDevice();
-//   // console.log(document.querySelector('.publishing-guide-wrap'));
-//   // document.querySelector('.publishing-guide-wrap').style.cssText = `
-//   //   border: 1px solid #f00;
-//   // `;
-// });
 </script>
 
 <template>
@@ -73,6 +56,7 @@ onUnmounted(() => {
       <p class="link-publist">
         <router-link to="/publishing/publist/total" class="cursor-zoom">PUBLISHING LIST</router-link>
       </p>
+
       <p class="link-convention">
         <router-link to="/publishing/convention/rule1" class="cursor-zoom">PUBLISHING CONVENTION</router-link>
       </p>

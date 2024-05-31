@@ -25,7 +25,7 @@ module.exports = {
     'import/no-unresolved': 'off',
     'vue/max-len': ['error', {
       code: 200,
-      template: 110,
+      template: 200,
       tabWidth: 2,
       comments: 80,
       ignorePattern: '',

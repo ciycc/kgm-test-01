@@ -33,6 +33,6 @@
 </template>
 
 <style lang="scss" scoped>
-@use "&/guide/scss/publishing-contents.scss" as *;
+@import "&/guide/scss/publishing-contents.scss";
 @include publist-convention;
 </style>
