@@ -1,8 +1,8 @@
 <template>
   <div class="wrap default">
-    <header>헤더컴포넌트 대체</header>
+    <header>Default 헤더컴포넌트 대체</header>
     <slot />
-    <footer>푸터컴포넌트 대체</footer>
+    <footer>Default 푸터컴포넌트 대체</footer>
   </div>
 </template>
 

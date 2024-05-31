@@ -1,3 +1,10 @@
-import publishingGuide from '&/router/router-publishing-guide';
+import publishingGuide from '&/router/routes-publishing-guide';
+import routesMa from '&/router/routes-ma';
+import routesBr from '&/router/routes-br';
 
-export default publishingGuide;
+const pubRoutes = [
+  ...publishingGuide,
+  ...routesMa,
+  ...routesBr,
+];
+export default pubRoutes;

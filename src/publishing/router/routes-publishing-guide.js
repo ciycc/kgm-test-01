@@ -1,4 +1,4 @@
-const publishingPath = '/publishing';
+const publishingPath = '/publishing/guide';
 const publishingGuide = [
   {
     path: `${publishingPath}`,
