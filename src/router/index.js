@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import publishingGuide from '&/router';
 
 const routes = [
@@ -25,7 +25,7 @@ const routes = [
   ...publishingGuide,
 ];
 const router = createRouter({
-  history: createWebHistory('/kgm-test-01/'),
+  history: createWebHashHistory('/kgm-test-01/'),
   routes,
   scrollBehavior() {
     // always scroll to top
