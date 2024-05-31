@@ -1,23 +1,31 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import publishingGuide from '&/router';
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('@/views/Home.vue'),
+    meta: {
+      layout: 'main',
+      wrapClass: [],
+      containerClass: [],
+    },
+    component: () => import('~/pages/home/Home.vue'),
   },
   {
     path: '/home2',
     name: 'Home2',
-    component: () => import('@/views/Home2.vue'),
+    meta: {
+      layout: 'default',
+      wrapClass: [],
+      containerClass: [],
+    },
+    component: () => import('~/pages/home/Home2.vue'),
   },
   ...publishingGuide,
 ];
 const router = createRouter({
-  // history: createWebHistory(),
-  history: createWebHashHistory('/kgm-test-01/'),
-
+  history: createWebHistory('/kgm-test-01/'),
   routes,
   scrollBehavior() {
     // always scroll to top
