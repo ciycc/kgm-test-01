@@ -5,6 +5,9 @@ const publishingGuide = [
     name: 'PublishingGuide',
     meta: {
       title: 'KG 모빌리티 퍼블리싱 GUIDE',
+      layout: 'blank',
+      wrapClass: [],
+      containerClass: [],
     },
     component: () => import('&/guide/index.vue'),
 
@@ -135,6 +138,11 @@ const publishingGuide = [
       {
         path: 'convention',
         name: 'PublishingConvention',
+        meta: {
+          layout: 'blank',
+          wrapClass: [],
+          containerClass: [],
+        },
         component: () => import('&/guide/components/publishing-convention.vue'),
         children: [
           {

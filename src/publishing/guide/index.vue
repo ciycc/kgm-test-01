@@ -22,19 +22,23 @@ onUnmounted(() => {
   document.title = beforeTitle;
 });
 
-const checkTouchDevice = () => {
-  const os = 'desktop';
-  document.body.id = os;
-  try {
-    document.createEvent('TouchEvent');
-    document.body.id = 'mobile';
-  } catch (e) {
-    document.body.id = 'desktop';
-  }
-};
-onMounted(() => {
-  checkTouchDevice();
-});
+// const checkTouchDevice = () => {
+//   const os = 'desktop';
+//   document.body.id = os;
+//   try {
+//     document.createEvent('TouchEvent');
+//     document.body.id = 'mobile';
+//   } catch (e) {
+//     document.body.id = 'desktop';
+//   }
+// };
+// onMounted(() => {
+//   checkTouchDevice();
+//   // console.log(document.querySelector('.publishing-guide-wrap'));
+//   // document.querySelector('.publishing-guide-wrap').style.cssText = `
+//   //   border: 1px solid #f00;
+//   // `;
+// });
 </script>
 
 <template>
@@ -44,8 +48,8 @@ onMounted(() => {
         <h1 class="publishing-guide-title"><span class="logo-img"><span class="blind">KGM</span></span><br>PUBLISHING
           GUIDE</h1>
         <ul>
-          <li><router-link class="cursor-zoom" to="/publishing/color">COLOR</router-link></li>
-          <li><router-link class="cursor-zoom" to="/publishing/fonts">FONTS</router-link></li>
+          <li><router-link class="cursor-zoom" to="/publishing/color">Color</router-link></li>
+          <li><router-link class="cursor-zoom" to="/publishing/fonts">Fonts</router-link></li>
           <li><router-link class="cursor-zoom" to="/publishing/layout">Layout</router-link></li>
           <li><router-link class="cursor-zoom" to="/publishing/button">Button</router-link></li>
           <li><router-link class="cursor-zoom" to="/publishing/table">Table</router-link></li>

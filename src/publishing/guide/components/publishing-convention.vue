@@ -13,7 +13,7 @@
           <router-link class="cursor-zoom" to="/publishing/convention/rule3">Style</router-link>
         </li>
         <li>
-          <router-link class="cursor-zoom" to="/publishing/convention/rule4">JS</router-link>
+          <router-link class="cursor-zoom" to="/publishing/convention/rule4">VUE &amp; JS</router-link>
         </li>
         <li>
           <router-link class="cursor-zoom" to="/publishing/convention/rule5">Etc</router-link>
