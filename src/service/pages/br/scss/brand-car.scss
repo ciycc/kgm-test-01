@@ -1,0 +1,4 @@
+@use "~/scss/mixin/br/mixin.scss" as *;
+.btn-1 {
+  @include button;
+}

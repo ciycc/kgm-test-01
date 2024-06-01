@@ -10,7 +10,7 @@ const routesBr = [
       wrapClass: [],
       containerClass: [],
     },
-    component: () => import('&/pages/br/index.vue'),
+    component: () => import('&/pages/br/brand-car.vue'),
   },
 ];
 export default routesBr;

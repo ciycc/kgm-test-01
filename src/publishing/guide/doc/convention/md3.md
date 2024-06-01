@@ -1,6 +1,26 @@
 # Style 기본 가이드
 ## 작성시 주의사항
 - 다른 File에 Style을 결합하는 @use, @import는 최상단에 작성합니다.
+- vue 파일에서 scss를 결합할 때는 @import를 이용하고, scss 파일에서 다른 scss파일을 결합할 때는 @use를 사용합니다.
+<br><br>
+
+*vue file에서 다른 sass file 결합 방식*
+
+```bash
+(생략)
+</template>
+
+<style lang="scss">
+@import "~/pages/br/scss/brand-car.scss";
+</style>
+```
+<br><br>
+
+*sass file에서 다른 scss file 결합 방식*
+
+```bash
+@use "~/scss/mixin/br/mixin.scss" as *;
+```
 
 
 ## @use 사용법
