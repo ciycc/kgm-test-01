@@ -97,8 +97,8 @@
 |구분|내용|
 |-:|:-|
 |*Vue Page*|- Kabab Case<br>- 최대 4단어 이하|
-|*Vue Component*|- Kabab Case<br>- 최대 4단어 이하<br>- import에는 Pascal Case 사용|
-|*Image*|- Kabab Case<br>- 최대 4단어 이하<br>- 파일명 규칙은 아래 [이미지 사용]내용 참고|
+|*Vue Component*|- Pascal Case<br>- 최대 4단어 이하|
+|*Image*|- Kabab Case<br>- 최대 4단어 이하<br>- 파일명 규칙은 다음 [이미지 사용] 내용 참고 바랍니다.|
 |*Scss*|- Kabab Case<br>- 최대 4단어 이하|
 |*JS*|- Kabab Case<br>- 최대 4단어 이하|
 

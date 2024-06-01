@@ -1,8 +1,9 @@
 # Style 기본 가이드
 ## 작성시 주의사항
 - 다른 File에 Style을 결합하는 @use, @import는 최상단에 작성합니다.
-- 다른 Style File을 결합할 경우 @import 보다는 @use사용을 지향합니다. 그러니 @use사용법을 숙지 바랍니다.
-<br><br><br>
+
+
+## @use 사용법
 
 *[예시 1-1]* 다른 File에 Style을 결합 할 경우
 ```bash

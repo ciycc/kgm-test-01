@@ -10,22 +10,13 @@ const routes = [
       wrapClass: [],
       containerClass: [],
     },
-    component: () => import('~/pages/home/Home.vue'),
-  },
-  {
-    path: '/home2',
-    name: 'Home2',
-    meta: {
-      layout: 'default',
-      wrapClass: [],
-      containerClass: [],
-    },
-    component: () => import('~/pages/home/Home2.vue'),
+    component: () => import('~/pages/main/Home.vue'),
   },
   ...publishingGuide,
 ];
 const router = createRouter({
   history: createWebHashHistory('/kgm-test-01/'),
+  // history: createWebHistory(),
   routes,
   scrollBehavior() {
     // always scroll to top

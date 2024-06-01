@@ -6,7 +6,4 @@
   </div>
 </template>
 <style lang="scss">
-.home-btn {
-  @include button;
-}
 </style>

@@ -10,7 +10,7 @@ const routesMa = [
       wrapClass: [],
       containerClass: [],
     },
-    component: () => import('&/pages/index.vue'),
+    component: () => import('&/pages/main/Home.vue'),
   },
 ];
 export default routesMa;
