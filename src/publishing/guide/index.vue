@@ -1,6 +1,6 @@
 <script setup>
 import { useSetMouseShape } from '&/guide/composables/useMouse';
-import MouseCursorPointer from '&/guide/components/mouse-cursor-pointer.vue';
+import MouseCursorPointer from '&/guide/pages/mouse-cursor-pointer.vue';
 
 const { mouseStatus, mouseShape } = useSetMouseShape();
 const router = useRouter();

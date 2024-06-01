@@ -1,5 +1,5 @@
 <script setup>
-import PublishingListTable from '&/guide/components/publishiing-list-table.vue';
+import PublishingListTable from '&/guide/pages/publishiing-list-table.vue';
 import PubData from '&/guide/data/publist.json';
 
 const state = reactive({ PubData });
