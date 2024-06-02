@@ -1,3 +1,5 @@
+<div class="md-section">
+
 # Style 기본 가이드
 ## 작성시 주의사항
 - 다른 File에 Style을 결합하는 @use, @import는 최상단에 작성합니다.
@@ -81,3 +83,5 @@
 6. *기타 속성*
 <br>
 <br>
+
+</div>

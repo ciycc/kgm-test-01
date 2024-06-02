@@ -1,3 +1,5 @@
+<div class="md-section">
+
 # JS 기본 가이드
 ## 함수 주석
 
@@ -43,3 +45,5 @@ pnpm dev
 
 </style>
 ```
+
+</div>

@@ -1,3 +1,5 @@
+<div class="md-section">
+
 # Markup 기본 가이드
 ## Markup Basic Rules
 ### 주의 사항
@@ -148,3 +150,5 @@
 5. 부연 설명 속성( title, alt )
 6. 접근성 속성( role, aria-* )
 7. 뷰 속성( v- )
+
+</div>

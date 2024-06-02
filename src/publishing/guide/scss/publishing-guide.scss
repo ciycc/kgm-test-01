@@ -150,157 +150,162 @@
   .publishing-container {
     &:deep() {
       .prose {
-        hr {
-          margin: rem(20) 0;
-          display: block;
-          border: none;
-          border-bottom: 1px solid #ccc;
-        }
-
-        strong {
-          display: inline-block;
-          padding: 0 rem(3);
-          background-color: rgb(229, 255, 0);
-          color: #421d6a;
-        }
-
-        em {
-          font-weight: 600;
-          color: #421d6a;
-        }
-
-        ol {
-          counter-reset: counter-list;
-
-          li {
-            padding: rem(8) rem(16) rem(0);
-            position: relative;
-
-            &::before {
-              counter-increment: counter-list;
-              content: counter(counter-list)". ";
-              position: absolute;
-              top: rem(8);
-              left: 0;
+        .md-section {
+          ~ .md-section {
+            margin-top: rem(30);
+          }
+          hr {
+            margin: rem(20) 0;
+            display: block;
+            border: none;
+            border-bottom: 1px solid #ccc;
+          }
+  
+          strong {
+            display: inline-block;
+            padding: 0 rem(3);
+            background-color: rgb(229, 255, 0);
+            color: #421d6a;
+          }
+  
+          em {
+            font-weight: 600;
+            color: #421d6a;
+          }
+  
+          ol {
+            counter-reset: counter-list;
+  
+            li {
+              padding: rem(8) rem(16) rem(0);
+              position: relative;
+  
+              &::before {
+                counter-increment: counter-list;
+                content: counter(counter-list)". ";
+                position: absolute;
+                top: rem(8);
+                left: 0;
+              }
             }
           }
-        }
-
-        ul {
+  
           ul {
-            padding: 0 rem(2);
-          }
-
-          li {
-            padding: rem(8) rem(16) rem(0);
-            position: relative;
-
-            &::before {
-              content: '\2713';
-              position: absolute;
-              left: 0;
-              top: rem(9);
+            ul {
+              padding: 0 rem(2);
+            }
+  
+            li {
+              padding: rem(8) rem(16) rem(0);
+              position: relative;
+  
+              &::before {
+                content: '\2713';
+                position: absolute;
+                left: 0;
+                top: rem(9);
+              }
             }
           }
-        }
-
-        table {
-          width: auto;
-          // min-width: rem(500);
-        }
-
-        table,
-        td,
-        th {
-          border: 1px solid #d0d7de;
-          padding: rem(6) rem(13);
-        }
-
-        thead {
-          th {
-            text-align: center !important;
+  
+          table {
+            width: auto;
+            // min-width: rem(500);
           }
-        }
-
-        th {
-          background-color: #f2ebfa;
-          color: #333;
-          font-weight: 500;
-        }
-
-        td {
-          background: #fff;
-          min-width: rem(100);
-          font-weight: 400;
-          font-size: rem(14);
-        }
-
-        *+ {
-
+  
           table,
+          td,
+          th {
+            border: 1px solid #d0d7de;
+            padding: rem(6) rem(13);
+          }
+  
+          thead {
+            th {
+              text-align: center !important;
+            }
+          }
+  
+          th {
+            background-color: #f2ebfa;
+            color: #333;
+            font-weight: 500;
+          }
+  
+          td {
+            background: #fff;
+            min-width: rem(100);
+            font-weight: 400;
+            font-size: rem(14);
+          }
+  
+          *+ {
+  
+            table,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+  
+              margin-top: rem(24);
+            }
+          }
+  
           h1,
           h2,
           h3,
           h4,
           h5,
           h6 {
-
-            margin-top: rem(24);
+  
+            +div,
+            +p,
+            +table {
+              margin-top: rem(10);
+            }
           }
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-
-          +div,
-          +p,
-          +table {
-            margin-top: rem(10);
+  
+          h1 {
+            font-size: rem(20);
+            font-weight: 600;
+            color: #421d6a;
+  
+            +* {
+              margin-top: 30px;
+            }
           }
-        }
-
-        h1 {
-          font-size: rem(20);
-          font-weight: 600;
-          color: #421d6a;
-
-          +* {
-            margin-top: 30px;
+  
+          h2 {
+            font-size: rem(18);
+            font-weight: 600;
           }
-        }
-
-        h2 {
-          font-size: rem(18);
-          font-weight: 600;
-        }
-
-        h3,
-        h4,
-        h5 {
-          font-size: rem(15);
-          font-weight: 600;
-          color: #333;
-        }
-
-        *+ {
+  
+          h3,
+          h4,
+          h5 {
+            font-size: rem(15);
+            font-weight: 600;
+            color: #333;
+          }
+  
+          *+ {
+            .shiki {
+              margin-top: rem(4);
+            }
+          }
+  
           .shiki {
-            margin-top: rem(4);
-          }
-        }
-
-        .shiki {
-          padding: rem(15) rem(10);
-          border-radius: rem(8);
-          max-height: rem(350);
-          overflow-y: auto;
-          @include custom-scroll(rgba(255, 255, 255, .8));
-
-          code {
-            mix-blend-mode: plus-lighter;
+            padding: rem(15) rem(10);
+            border-radius: rem(8);
+            max-height: rem(350);
+            overflow-y: auto;
+            @include custom-scroll(rgba(255, 255, 255, .8));
+  
+            code {
+              mix-blend-mode: plus-lighter;
+            }
           }
         }
       }
