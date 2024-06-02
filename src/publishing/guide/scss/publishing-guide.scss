@@ -150,6 +150,20 @@
   .publishing-container {
     &:deep() {
       .prose {
+        .color-guide-list {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          .md-section {
+            padding-bottom: rem(8);
+            h2 {
+              text-align: center;
+            }
+          }
+          .color-item {
+            padding: rem(20) rem(20) 0;
+          }
+        }
         .md-section {
           ~ .md-section {
             margin-top: rem(30);
